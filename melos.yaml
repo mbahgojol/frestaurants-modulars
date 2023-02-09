@@ -35,3 +35,8 @@ scripts:
     run: melos exec -c 1 -- \
       flutter pub get .
     description: Build all generated files for Flutter packages in this project.
+
+  clean:
+    run: melos exec -c 1 -- \
+      flutter clean .
+    description: Build all generated files for Flutter packages in this project.

@@ -3,7 +3,6 @@ import 'package:dashboard/dashboard.dart';
 import 'package:data/data.dart';
 import 'package:dependencies/dependencies.dart';
 import 'package:domain/domain.dart';
-import 'package:domain/usecases/show_print.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -28,11 +27,10 @@ class AppWidget extends StatelessWidget {
 
 class AppModule extends Module {
   @override
-  List<Bind> get binds => [
-        Bind.factory<RestoRemoteDataSource>((i) => RestoRemoteDataSourceImpl()),
-        Bind.factory<RestoRepository>((i) => RestoRepositoryImpl(i())),
-        Bind.lazySingleton((i) => GetListRestaurant(i())),
-        Bind.lazySingleton((i) => ShowPrint())
+  @override
+  List<Module> get imports => [
+        DataModule(),
+        DomainModule(),
       ];
 
   @override
