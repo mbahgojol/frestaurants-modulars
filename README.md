@@ -3,8 +3,7 @@
 Restaurant App with Modulars
 
 ### Module Structure
-
-![](../../../Desktop/Screenshot at Feb 09 11-42-19 PM.png)
+![](ss/ss1.png)
 
 ### How to run build_runner for all module
 I use ```melos.yaml``` to help to do this
