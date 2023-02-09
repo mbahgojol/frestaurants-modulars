@@ -6,9 +6,9 @@ Restaurant App with Modulars
 ![](ss/ss1.png)
 
 ### How to run build_runner for all module
-I use ```melos.yaml``` to help to do this
+I used ```melos.yaml``` to help do this
 
-So, following these command
+So, follow this command
 ```dart
  root project folder > melos run generate:flutter 
 ```
