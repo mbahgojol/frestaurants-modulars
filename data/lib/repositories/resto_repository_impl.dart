@@ -1,15 +1,13 @@
 import 'dart:io';
 
 import 'package:dartz/dartz.dart';
-import 'package:data/datasource/resto_remote_data_source.dart';
-import 'package:data/entities/resto.dart';
-import 'package:data/repositories/resto_repository.dart';
+import 'package:data/data.dart';
 import 'package:shared/failure.dart';
 
 class RestoRepositoryImpl implements RestoRepository {
   final RestoRemoteDataSource remoteDataSource;
 
-  RestoRepositoryImpl({required this.remoteDataSource});
+  RestoRepositoryImpl(this.remoteDataSource);
 
   @override
   Future<Either<Failure, List<Resto>>> getNowPlayingMovies() async {
